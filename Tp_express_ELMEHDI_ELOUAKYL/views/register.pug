@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Inscription
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
+  body(class="bg-gradient-to-r from-green-400 to-teal-500 min-h-screen flex items-center justify-center")
+    div(class="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md")
+      h1(class="text-3xl font-bold text-center text-gray-800 mb-6") Créer un compte
+      form(action="/register" method="POST" class="space-y-4")
+        input(type="text" name="username" placeholder="Nom d'utilisateur" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400")
+        input(type="password" name="password" placeholder="Mot de passe" required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400")
+        button(type="submit"
+          class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition") S'inscrire
+      p(class="text-center text-gray-600 mt-4")
+        | Déjà un compte ?
+        a(href="/login" class="text-green-500 hover:underline") Se connecter
